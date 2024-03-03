@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/free_screen_bg">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:translationZ="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_40"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:id="@+id/link_title_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true">
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/link_back_rl"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_marginLeft="1dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:id="@+id/link_logo"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginLeft="8dp"-->
+<!--                        android:layout_centerVertical="true"-->
+<!--                        android:src="@drawable/app_logo"-->
+<!--                        />-->
+<!--                </RelativeLayout>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/link_status"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentRight="true"-->
+<!--                    android:layout_marginRight="@dimen/dp_20"-->
+<!--                    android:paddingTop="3dp"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:clickable="false"-->
+<!--                    android:background="?android:attr/selectableItemBackground"-->
+<!--                    android:foreground="?android:attr/selectableItemBackground"-->
+<!--                    android:src="@drawable/cast_offline"-->
+<!--                    />-->
+
+                <ImageView
+                    android:id="@+id/link_setting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/dp_20"
+                    android:padding="@dimen/dp_5"
+                    android:layout_centerVertical="true"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/setting"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_below="@+id/link_title_rl">
+                <!--                <Button-->
+                <!--                    android:id="@+id/screen_mirror"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_weight = "1.0"-->
+                <!--                    android:layout_gravity="center_vertical"-->
+                <!--                    android:layout_marginStart="@dimen/dp_16"-->
+                <!--                    android:layout_marginEnd="@dimen/dp_10"-->
+                <!--                    android:background="@drawable/firstpage_button_shape"-->
+                <!--                    android:foreground="?android:attr/selectableItemBackground"-->
+                <!--                    android:textColor="@color/color_ffffff"-->
+                <!--                    android:textSize="@dimen/sp_10"-->
+                <!--                    android:text="@string/mirror" />-->
+                <Button
+                    android:id="@+id/screen_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight = "1.0"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_40"
+                    android:layout_marginEnd="@dimen/dp_40"
+                    android:background="@drawable/firstpage_button_shape"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:textColor="@color/color_ffffff"
+                    android:textSize="@dimen/sp_15"
+                    android:text="@string/freecast" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/common_tab"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/dp_50"
+            tl:tl_iconGravity="LEFT"
+            tl:tl_iconHeight="18dp"
+            tl:tl_iconMargin="12dp"
+            tl:tl_iconWidth="18dp"
+            tl:tl_textSelectColor="#ffffffff"
+            tl:tl_textUnselectColor="#ff9f9f9f"
+            tl:tl_textsize="12sp"
+            tl:tl_indicator_style="BLOCK"
+            tl:tl_indicator_color="#00000000"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="@color/fp_background" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:background="@color/fp_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

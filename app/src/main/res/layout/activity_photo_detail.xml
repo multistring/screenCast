@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/free_screen_bg"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="multi.string.screencast.activity.PhotoDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/photo_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="#00000000">
+
+        <RelativeLayout
+            android:id="@+id/photo_back_rl"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp">
+
+            <ImageView
+                android:id="@+id/photo_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_back"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fold_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="photos"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/start_cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_16"
+            android:padding="@dimen/dp_4"
+            android:layout_centerVertical="true"
+            android:src="@drawable/start_show"
+            />
+
+<!--        <TextView-->
+<!--            android:id="@+id/start_cast"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginRight="@dimen/dp_10"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:text="@string/startcast"-->
+<!--            android:textColor="#90F3A5"-->
+<!--            android:textSize="12sp"-->
+<!--            android:foreground="?android:attr/selectableItemBackground"-->
+<!--            />-->
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

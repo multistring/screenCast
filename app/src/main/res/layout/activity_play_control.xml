@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    tools:context="multi.string.screencast.activity.PlayControlActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:scaleType="centerCrop"
+        android:src="@drawable/player_control_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:id="@+id/headLinear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <View
+            android:id="@+id/statusView"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            />
+        <include
+            android:id="@+id/headView"
+            layout="@layout/head_view"
+            app:layout_constraintTop_toBottomOf="@+id/statusView"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/menuLinear"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_28"
+        android:layout_marginTop="@dimen/dp_40"
+        android:background="@drawable/white_bg_left_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/stopTvLinear"
+        app:layout_constraintTop_toBottomOf="@+id/headLinear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/menu_img" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/stopTvLinear"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_2"
+        android:background="@drawable/white_bg_right_shape"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/menuLinear"
+        app:layout_constraintRight_toLeftOf="@+id/addLinear"
+        app:layout_constraintTop_toTopOf="@+id/menuLinear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/tv_control_exit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addLinear"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_20"
+        android:background="@drawable/white_bg_left_shape"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toRightOf="@id/stopTvLinear"
+        app:layout_constraintRight_toLeftOf="@+id/delLinear"
+        app:layout_constraintTop_toTopOf="@+id/menuLinear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_img" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/delLinear"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_28"
+        android:background="@drawable/white_bg_right_shape"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintDimensionRatio="1:2"
+        app:layout_constraintHorizontal_weight="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/addLinear"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/menuLinear">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/del_img" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playcontrol"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/white_bg_shape"
+        app:layout_constraintLeft_toLeftOf="@+id/menuLinear"
+        app:layout_constraintRight_toRightOf="@+id/delLinear"
+        app:layout_constraintTop_toBottomOf="@+id/menuLinear">
+
+        <LinearLayout
+            android:id="@+id/progressLinear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_42"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/white_progress_bg_shape"
+            android:padding="@dimen/dp_3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <SeekBar
+                android:id="@+id/progressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:max="100"
+                android:progress="0"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:thumb="@null"
+                android:progressDrawable="@drawable/progress_bg" />
+        </LinearLayout>
+<!--        style="@style/Widget.AppCompat.ProgressBar.Horizontal"-->
+<!--        style="@android:style/Widget.DeviceDefault.SeekBar"-->
+        <TextView
+            android:id="@+id/currentTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintLeft_toLeftOf="@+id/progressLinear"
+            app:layout_constraintTop_toBottomOf="@+id/progressLinear"
+            android:text="00:00:00" />
+
+        <TextView
+            android:id="@+id/totalTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintRight_toRightOf="@+id/progressLinear"
+            app:layout_constraintTop_toBottomOf="@+id/progressLinear"
+            android:text="00:00:00" />
+
+        <LinearLayout
+            android:id="@+id/lastLinear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/last_img"
+            app:layout_constraintBottom_toBottomOf="@+id/playLinear"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toLeftOf="@id/progressLinear"
+            app:layout_constraintRight_toLeftOf="@+id/playLinear"
+            app:layout_constraintTop_toTopOf="@+id/playLinear">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/lastImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/last_img" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playLinear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_26"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@id/lastLinear"
+            app:layout_constraintRight_toLeftOf="@+id/nextLinear"
+            app:layout_constraintTop_toBottomOf="@+id/currentTimeTv">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/playImg"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:padding="@dimen/dp_10"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/play_img" />
+
+        </LinearLayout>
+<!--        android:src="@drawable/play_img"-->
+
+        <LinearLayout
+            android:id="@+id/nextLinear"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@+id/playLinear"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/playLinear"
+            app:layout_constraintRight_toRightOf="@id/progressLinear"
+            app:layout_constraintTop_toTopOf="@+id/playLinear">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/nextImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:src="@drawable/next_img" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <multi.string.screencast.widgets.GradientTextView
+        android:id="@+id/video_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/playcontrol"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/dp_40"
+        android:text="@string/loading"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        android:clickable="false"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

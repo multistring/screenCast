@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_item_height"
+    android:layout_gravity="center_vertical"
+    android:paddingBottom="@dimen/listview_items_padding_top_bottom"
+    android:paddingTop="@dimen/listview_items_padding_top_bottom">
+
+    <ImageView
+        android:id="@+id/listview_item_image"
+        android:layout_width="@dimen/green_shape_size"
+        android:layout_height="@dimen/green_shape_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/listview_album_margin"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:textColor="@color/colorWhite"
+        android:id="@+id/listview_item_line_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/listview_item_image"
+        android:duplicateParentState="true"
+        android:ellipsize="marquee"
+        android:maxLength="29"
+        android:paddingLeft="@dimen/listview_items_padding_left_top"
+        android:paddingRight="@dimen/listview_items_padding_right"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:textSize="@dimen/text_size_small"/>
+
+        <Button
+            android:id="@+id/device_status_bt"
+            android:layout_width="66dp"
+            android:layout_height="31dp"
+            android:text="connect"
+            android:textSize="@dimen/text_size_extra_micro"
+            android:singleLine="true"
+            android:textColor="#555555"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:foreground="?android:attr/selectableItemBackground"/>
+
+</RelativeLayout>

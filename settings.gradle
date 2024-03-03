@@ -1,0 +1,5 @@
+rootProject.name = "ScreenCast"
+//include ':app'
+include ':app',':imageselector'
+include ':screening', ':webserver', ':simplepermission'
+include ':network' ,'switchlib'

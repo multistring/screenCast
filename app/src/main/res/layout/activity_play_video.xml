@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000">
+
+
+        <sdk.android.zplayer.playercore.view.InnoVideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+        </sdk.android.zplayer.playercore.view.InnoVideoView>
+
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_gravity="top|left"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@drawable/icon_cancel"/>
+
+
+        <RelativeLayout
+            android:id="@+id/play_progress_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/btnPlay"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_20"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:background="@drawable/play_control_ok"/>
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="0"
+                android:maxHeight="2.0dip"
+                android:minHeight="2.0dip"
+                android:progress="0"
+                android:paddingLeft="10dp"
+                android:paddingRight="40dp"
+                android:progressDrawable="@drawable/play_seekbar_progress"
+                android:thumb="@mipmap/play_seekbar_icon"
+                android:layout_toRightOf="@+id/btnPlay"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

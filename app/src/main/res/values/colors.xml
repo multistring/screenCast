@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="white">#FFFFFFFF</color>-->
+
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="background_gray1">#EBEBEB</color>
+    <color name="colorWhite">#ffffff</color>
+    <!--透明-->
+    <color name="transparent">#00000000</color>
+    <!--半透明-->
+    <color name="translucent">#22050505</color>
+    <color name="photo_bg">#77050505</color>
+    <color name="fp_background">#44000000</color>
+
+    <color name="ring_small_circle">#7700D4BB</color>
+
+    <color name="device_list_area_color">#22F2F6F6</color>
+
+    <!--    <color name="color_ffffff">#ffffff</color>-->
+    <!--    <color name="color_e6ffffff">#e6ffffff</color>-->
+    <!--    <color name="color_1Affffff">#1Affffff</color>-->
+    <!--    <color name="color_E9C76A">#E9C76A</color>-->
+    <!--    <color name="color_33ffffff">#33ffffff</color>-->
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_e6ffffff">#e6ffffff</color>
+    <color name="color_1Affffff">#1Affffff</color>
+    <color name="color_E9C76A">#E9C76A</color>
+    <color name="color_33ffffff">#33ffffff</color>
+    <color name="color_f3f3f3">#f3f3f3</color>
+    <color name="color_4A6BF0">#4A6BF0</color>
+    <color name="color_44000000">#44000000</color>
+    <!--    <color name="transparent">#00000000</color>-->
+    <color name="color_999999">#999999</color>
+
+    <color name="test">#454544</color>
+    <color name="color_F6F7F8">#F6F7F8</color>
+    <color name="color_66ffffff">#66ffffff</color>
+    <color name="color_EAC890">#EAC890</color>
+    <color name="color_80ffffff">#80ffffff</color>
+    <color name="color_AAA">#AAA</color>
+    <color name="color_3B56BF">#3B56BF</color>
+    <color name="color_4A6BEF">#4A6BEF</color>
+    <color name="color_333333">#333333</color>
+</resources>

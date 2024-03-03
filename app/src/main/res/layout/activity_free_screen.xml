@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/free_screen_bg">
+
+    <RelativeLayout
+        android:id="@+id/link_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff121212"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:id="@+id/link_back_rl"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="1dp">
+
+            <ImageView
+                android:id="@+id/link_back"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_back"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/link_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:text="@string/screencastto"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            />
+
+        <RelativeLayout
+            android:id="@+id/link_help_rl"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="1dp">
+
+            <ImageView
+                android:id="@+id/link_help"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginRight="8dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/question"
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/link_title_rl"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp">
+        <multi.string.screencast.widgets.SearchRingView
+            android:id="@+id/search_ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp" />
+
+        <ImageView
+            android:id="@+id/search_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/search"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/wifi_disconnect_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/link_title_rl"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:layout_marginTop="15dp">
+        <ImageView
+            android:id="@+id/wifi_disconnect_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:padding="20dp"
+            android:src="@drawable/wifi_unconnect"
+            />
+
+        <TextView
+            android:id="@+id/wifi_disconnect_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/wifi_disconnect_img"
+            android:layout_marginTop="12dp"
+            android:text="@string/system_mirror_desc1"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/deviceListView"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/search_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/reduis_4_bg"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/screen_4k_desc_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/deviceListView"
+        android:background="@drawable/reduis_4_bg"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/screen_4k_desc"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/screen_fourk_cast"
+            android:textColor="#EDE068"
+            android:textSize="12sp"
+            />
+
+        <com.sd.lib.switchbutton.FSwitchButton
+            android:id="@+id/sb_custom"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/screen_4k_desc"
+            android:layout_marginLeft="@dimen/dp_23"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            app:sbImageChecked="@drawable/layer_checked_view"
+            app:sbImageNormal="@drawable/layer_normal_view"
+            app:sbImageThumb="@drawable/layer_thumb_view"
+            app:sbIsChecked="true"
+            app:sbIsDebug="true"
+            app:sbIsNeedToggleAnim="true"
+            app:sbMarginBottom="2dp"
+            app:sbMarginLeft="0dp"
+            app:sbMarginRight="2dp"
+            app:sbMarginTop="2dp" />
+    </RelativeLayout>
+
+<!--    <TextView-->
+<!--        android:id="@+id/screen_4k_desc_detail"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="@dimen/dp_40"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_marginRight="@dimen/dp_40"-->
+<!--        android:layout_below="@+id/screen_4k_desc_rl"-->
+<!--        android:layout_marginTop="@dimen/dp_30"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/screen_fourk_cast_detail"-->
+<!--        android:textColor="#FFFFFF"-->
+<!--        android:textSize="13sp"-->
+<!--        />-->
+
+    <RelativeLayout
+        android:id="@+id/use_describe"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/search_rl"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/use_describe1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="@string/cast_describe_one"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            />
+
+        <TextView
+            android:id="@+id/use_describe2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/use_describe1"
+            android:layout_marginTop="10dp"
+            android:text="@string/cast_describe_two"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            />
+
+        <TextView
+            android:id="@+id/use_describe3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/use_describe2"
+            android:layout_marginTop="3dp"
+            android:text="@string/cast_describe_three"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+
+
+    <!--加载中icon-->
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/loadingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:indicator="BallClipRotateMultiple"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:text="00:00:00"
+        android:id="@+id/clock_time"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        />
+
+</RelativeLayout>

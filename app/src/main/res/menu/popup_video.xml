@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/popup_meida_add_playlist"
+        android:icon="@drawable/add_to_list"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:title="@string/add_to_list" />
+
+    <item
+        android:id="@+id/popup_meida_play"
+        android:icon="@drawable/play_video_local"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:title="@string/play_local" />
+
+    <item
+        android:id="@+id/popup_meida_play_tv"
+        android:icon="@drawable/cast_to_tv"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:title="@string/play_remote" />
+
+
+</menu>
